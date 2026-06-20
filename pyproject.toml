@@ -1,0 +1,52 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "TRABALHO FINAL - DATA ENGINEERING PROGRAMMING"
+version = "1.0.0"
+authors = [
+    { name = "Guilherme Csorgo Henriques", email="RM370073@fiap.com.br" },
+    { name = "Karen Luzia Vitório Martins", email="RM370096@fiap.com.br" },
+    { name = "Ludmila Rocha Silva", email="RM372484@fiap.com.br" },
+    { name = "Thiago Guilherme", email="RM375344@fiap.com.br" },
+]
+description = "Trabalho Final - Data Engineering Programming - MBA Engenharia de Dados - FIAP"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "pyspark>=3.5.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-cov>=6.0.0",
+    "black>=24.0.0",
+    "build>=1.0.0",
+]
+
+[project.scripts]
+run-pipeline = "src.main:main"
+
+[tool.setuptools]
+package-dir = { "" = "." }
+packages = { find = { where = ["."], include = ["src*"] } }
+
+[tool.pytest.ini_options]
+pythonpath = [".", "src"]
+testpaths = ["tests"]
+markers = [
+    "unit: Testes unitarios isolados (sem I/O externo)",
+    "integration: Testes de integração (orquestracao entre componentes)",
+]
+addopts = "-v"
+
+[tool.black]
+line-length = 120
+target-version = ["py310"]

@@ -1,0 +1,16 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+pyspark = ">=3.5.0"
+
+[dev-packages]
+pytest = ">=8.0.0"
+black = "*"
+build = "*"
+pytest-cov = "*"
+
+[requires]
+python_version = "3.11"
