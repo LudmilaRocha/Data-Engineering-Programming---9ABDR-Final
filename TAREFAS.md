@@ -1,5 +1,7 @@
 # Tarefas do Projeto
 
+NOTA: Feito via IA (Claude Sonnet 4.6, reasoning médio)
+
 Checklist de atividades para execução do trabalho final. Marque com `[✔]` conforme concluído.
 
 ---
