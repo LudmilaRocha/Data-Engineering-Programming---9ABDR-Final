@@ -15,6 +15,7 @@ Membros do grupo:
 - Dizer que não estamos usando pip e sim pipenv (e os porquês: Mais fácil gerenciar pacote, resolve conflitos sozinho, guarda hashes dos pacotes em um arquivo `.lock`, além de separar o que é dependencia dev e o que é prod)
 - Revisar e atualizar o "Estrutura do Projeto" e o "Descrição dos pacotes" ao final do trabalho
 - Apontar no projeto o que foi feito por IA e o que foi feito por humanos. Também adicionar essa informação aqui
+- Não vamos usar múltiplas branches com feature, bugfix, etc.. vamos fazer tudo na main para facilitar
 
 ## Estrutura do Projeto
 Buscamos criar uma estrutura que consolide os aprendizados vistos em aula com as boas práticas de mercado. Levamos em consideração tanto a separação de escopos como a modularização dos escopos. 
