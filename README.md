@@ -55,7 +55,7 @@ Buscamos criar uma estrutura que consolide os aprendizados vistos em aula com as
 |---|---|
 | `src/config` | Centraliza todas as configurações do projeto (caminhos de entrada/saída, nome da aplicação, parâmetros de execução). |
 | `src/spark` | Gerencia a criação e o ciclo de vida da SparkSession. |
-| `src/io` | Leitura dos datasets de origem (pedidos em CSV, pagamentos em JSON) e escrita do relatório final em Parquet. Todos os schemas são definidos explicitamente. |
+| `src/data_io` | Leitura dos datasets de origem (pedidos em CSV, pagamentos em JSON) e escrita do relatório final em Parquet. Todos os schemas são definidos explicitamente. |
 | `src/business` | Contém as regras de negócio: filtros, joins e transformações. Inclui logging das etapas e tratamento de erros com try/except. |
 | `src/pipeline` | Orquestra a execução do pipeline de ponta a ponta (leitura → transformação → escrita). |
 | `tests` | Testes unitários da lógica de negócio utilizando pytest. |

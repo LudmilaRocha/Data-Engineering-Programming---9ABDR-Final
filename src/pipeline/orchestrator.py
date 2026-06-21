@@ -1,7 +1,7 @@
 import logging
 
-from io.reader import PedidosReader, PagamentosReader
-from io.writer import ParquetWriter
+from data_io.reader import PedidosReader, PagamentosReader
+from data_io.writer import ParquetWriter
 from business.logic import BusinessLogic
 
 logger = logging.getLogger(__name__)

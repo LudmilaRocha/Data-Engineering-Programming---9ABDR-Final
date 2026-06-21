@@ -4,8 +4,8 @@ import logging.config
 from config.logging import log_config
 from config.settings import Settings
 from spark.session import SparkSessionManager
-from io.reader import PedidosReader, PagamentosReader
-from io.writer import ParquetWriter
+from data_io.reader import PedidosReader, PagamentosReader
+from data_io.writer import ParquetWriter
 from business.logic import BusinessLogic
 from pipeline.orchestrator import PipelineOrchestrator
 

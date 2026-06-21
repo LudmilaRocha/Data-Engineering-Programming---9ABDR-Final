@@ -27,9 +27,9 @@ Checklist de atividades para execução do trabalho final. Marque com `[✔]` co
 
 - [✔] 3.1 Pacote de Configurações — classe de configuração centralizada (`src/config/settings.py`)
 - [✔] 3.2 Pacote de Sessão Spark — classe de gerenciamento da SparkSession (`src/spark/session.py`)
-- [✔] 3.3 Pacote de I/O — classe de leitura dos CSVs de pedidos com schema explícito (`src/io/reader.py`)
-- [✔] 3.4 Pacote de I/O — classe de leitura dos JSONs de pagamentos com schema explícito (`src/io/reader.py`)
-- [✔] 3.5 Pacote de I/O — classe de escrita do relatório em Parquet (`src/io/writer.py`)
+- [✔] 3.3 Pacote de I/O — classe de leitura dos CSVs de pedidos com schema explícito (`src/data_io/reader.py`)
+- [✔] 3.4 Pacote de I/O — classe de leitura dos JSONs de pagamentos com schema explícito (`src/data_io/reader.py`)
+- [✔] 3.5 Pacote de I/O — classe de escrita do relatório em Parquet (`src/data_io/writer.py`)
 - [✔] 3.6 Pacote de Lógica de Negócio (`src/business/logic.py`)
   - [✔] Filtrar pagamentos recusados (`status=false`)
   - [✔] Filtrar avaliação de fraude legítima (`fraude=false`)
