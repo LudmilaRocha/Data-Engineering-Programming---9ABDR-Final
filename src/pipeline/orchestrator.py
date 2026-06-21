@@ -26,21 +26,21 @@ class PipelineOrchestrator:
         self._business_logic = business_logic
 
     def run(self) -> None:
-        self.logger.info("************************** Iniciando pipeline")
+        self.logger.info("Iniciando pipeline")
 
-        self.logger.info("************************** Lendo dataset de pedidos")
+        self.logger.info("Lendo dataset de pedidos")
         df_pedidos = self._pedidos_reader.read()
 
-        self.logger.info("************************** Lendo dataset de pagamentos")
+        self.logger.info("Lendo dataset de pagamentos")
         df_pagamentos = self._pagamentos_reader.read()
 
-        self.logger.info("************************** Executando lógica de negócio")
+        self.logger.info("Executando lógica de negócio")
         df_resultado = self._business_logic.execute(df_pedidos, df_pagamentos)
 
-        self.logger.info("************************** Gravando relatório em Parquet")
+        self.logger.info("Gravando relatório em Parquet")
         self._writer.write(df_resultado)
 
-        self.logger.info("************************** Validando arquivo Parquet gerado")
+        self.logger.info("Validando arquivo Parquet gerado")
         self._business_logic.validar_parquet()
 
         self.logger.info("Pipeline finalizado com sucesso")
