@@ -72,10 +72,13 @@ class BusinessLogic:
          as duas colunas). Podiamos tratar esse campo, mas não estava no escopo do projeto.
         """
         logger.info("Realizando join entre pedidos e pagamentos (ID_PEDIDO == id_pedido)")
-        return df_pedidos.join(
-            df_pagamentos,
-            df_pedidos["ID_PEDIDO"] == df_pagamentos["id_pedido"],
-            "inner",
+        return (
+            df_pedidos.join(
+                df_pagamentos,
+                df_pedidos["ID_PEDIDO"] == df_pagamentos["id_pedido"],
+                "inner",
+            )
+            .drop(df_pagamentos["id_pedido"])
         )
 
     def _selecionar_colunas(self, df: DataFrame) -> DataFrame:

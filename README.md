@@ -28,7 +28,7 @@ Buscamos criar uma estrutura que consolide os aprendizados vistos em aula com as
 │   │   └── settings.py            # Classe de configuração do projeto (caminhos, parâmetros, etc)
 │   ├── spark/
 │   │   └── session.py             # Classe de gerenciamento da SparkSession
-│   ├── io/
+│   ├── data_io/
 │   │   ├── reader.py              # Classes de leitura de dados (CSV e JSON a priori)
 │   │   └── writer.py              # Classe de escrita de dados (Parquet)
 │   ├── business/
