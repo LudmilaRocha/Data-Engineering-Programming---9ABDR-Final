@@ -1,5 +1,6 @@
-import shutil
 import os
+import shutil
+import tempfile
 
 from pyspark.sql import DataFrame
 
@@ -13,7 +14,24 @@ class ParquetWriter:
         self._settings = settings
 
     def write(self, df: DataFrame) -> None:
-        if os.path.exists(self._settings.output_path):
-            shutil.rmtree(self._settings.output_path, ignore_errors=True)
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            tmp_output = os.path.join(tmp_dir, "parquet")
+            df.write.parquet(tmp_output)
 
-        df.write.mode("overwrite").parquet(self._settings.output_path)
+            os.makedirs(self._settings.output_path, exist_ok=True)
+
+            for item in os.listdir(self._settings.output_path):
+                item_path = os.path.join(self._settings.output_path, item)
+                try:
+                    if os.path.isdir(item_path):
+                        shutil.rmtree(item_path)
+                    else:
+                        os.remove(item_path)
+                except PermissionError:
+                    pass
+
+            for item in os.listdir(tmp_output):
+                shutil.move(
+                    os.path.join(tmp_output, item),
+                    os.path.join(self._settings.output_path, item),
+                )
