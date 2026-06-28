@@ -11,17 +11,17 @@
 > [!NOTE]
 > O processo de clonagem do repositório foi executado com sucesso e todos os arquivos foram baixados corretamente.
 
-```
-[Espaço Reservado para Imagem: Evidência do Processo de Clonagem]
-<!-- ![Evidência da Clonagem](caminho/para/imagem_clonagem.png) -->
-```
+<img width="886" height="541" alt="image" src="https://github.com/user-attachments/assets/ff155f14-c25b-4d7a-a786-8d44fbb2bf3d" />
+
 
 ---
 
 ## 2. Execução do Script Bash (`run_program.sh`)
 
 ### Conteúdo - README
-Observei no [README.md](file:///c:/Users/Usuario/Documents/MBA%20Engenharia%20de%20Dados/Projetos/Data%20Engineering%20Programming/Data-Engineering-Programming%20Final/Data-Engineering-Programming---9ABDR-Final/README.md) que ele orienta a executar como `bash run_program.py`, mas o correto deveria ser `run_program.sh`. Quando executei o comando no terminal do VS Code, apresentou erro.
+Observei no [README.md](file:///c:/Users/Usuario/Documents/MBA%20Engenharia%20de%20Dados/Projetos/Data%20Engineering%20Programming/Data-Engineering-Programming%20Final/Data-Engineering-Programming---9ABDR-Final/README.md) que ele orienta a executar como `bash run_program.py`, mas o correto deveria ser `run_program.sh`. 
+
+<img width="886" height="523" alt="image" src="https://github.com/user-attachments/assets/4ef6bcff-840c-4b70-b6a5-04128ec9871e" />
 
 ---
 
@@ -35,11 +35,9 @@ set: usage: set [-abefhkmnptuvxBCEHPT] [-o option-name] [--] [-] [arg ...]
 run_program.sh: line 3: $'\r': command not found
 run_program.sh: line 7: $'\r': command not found
 ```
+<img width="886" height="210" alt="image" src="https://github.com/user-attachments/assets/50cfb04f-36fe-410d-aee2-5d6cd3675ff9" />
 
-```
-[Espaço Reservado para Imagem: Erro de Execução no VS Code]
-<!-- ![Erro VS Code](caminho/para/imagem_erro_vscode.png) -->
-```
+
 
 #### Cenário 2 - Execução no PowerShell
 Abri o meu diretório com o comando `cd` e executei o comando `bash run_program.sh`, retornando os mesmos erros:
@@ -51,18 +49,14 @@ run_program.sh: line 3: $'\r': command not found
 run_program.sh: line 7: $'\r': command not found
 ```
 
-```
-[Espaço Reservado para Imagem: Erro de Execução no PowerShell]
-<!-- ![Erro PowerShell](caminho/para/imagem_erro_powershell.png) -->
-```
+<img width="886" height="763" alt="image" src="https://github.com/user-attachments/assets/3e74bb97-e23a-4dfc-9c56-fabd4c4f7b00" />
+
 
 #### Cenário 3 - Dois cliques no arquivo
 Ele solicita para escolher um aplicativo para execução.
 
-```
-[Espaço Reservado para Imagem: Comportamento de Dois Cliques]
-<!-- ![Dois Cliques](caminho/para/imagem_dois_cliques.png) -->
-```
+<img width="886" height="791" alt="image" src="https://github.com/user-attachments/assets/1ccb2f38-73a7-40e1-a91e-1563257cb0a1" />
+
 
 ---
 
@@ -75,6 +69,8 @@ Ele solicita para escolher um aplicativo para execução.
 * **Sugestão:** Criação do arquivo `.gitattributes` com a regra `*.sh text eol=lf`. Com isso, o Git consegue ajustar automaticamente a quebra de linha nos dois ambientes (Linux/Windows) quando o professor clonar o repositório.
 
 * **Resolução na minha máquina local:** No VS Code, cliquei em **CRLF** no canto inferior direito, mudei para **LF** e salvei o arquivo (`Ctrl + S`).
+  <img width="886" height="628" alt="image" src="https://github.com/user-attachments/assets/5e2e6853-0cde-4986-8fa2-c30325c05f1e" />
+
 
 * **Novo erro encontrado:** O script subentende que a pessoa tem Python instalado na máquina e configurado corretamente no path, o que pode não ocorrer em todas as máquinas.
   ```text
@@ -82,11 +78,17 @@ Ele solicita para escolher um aplicativo para execução.
   Instalando pipenv...
   run_program.sh: line 42: pip: command not found
   ```
+  <img width="886" height="135" alt="image" src="https://github.com/user-attachments/assets/9d356c81-c29f-495f-b4e9-538ffb226a7e" />
+
   Para corrigir localmente, precisei instalar na minha máquina:
   ```powershell
   winget install Python.Python.3.11
   python -m pip install pipenv
   ```
+  <img width="886" height="194" alt="image" src="https://github.com/user-attachments/assets/fcbcbe7a-faae-4140-820d-a503c9ad4cb5" />
+  <img width="886" height="323" alt="image" src="https://github.com/user-attachments/assets/4d2e103a-22d3-4333-94dc-8f8550e4681e" />
+
+
   Executei novamente `bash run_program.sh`, mas apresentou o mesmo erro:
   ```text
   Pagamentos: 25 arquivos
@@ -95,14 +97,12 @@ Ele solicita para escolher um aplicativo para execução.
   Instalando pipenv...
   run_program.sh: line 42: pip: command not found 
   ```
+  <img width="767" height="313" alt="image" src="https://github.com/user-attachments/assets/228cf188-11ae-411c-860d-be66134d7d4b" />
+
 
 * **Dica de Resolução no Script:** Em vez de usar `pipenv install --dev`, utilizar `python -m pipenv install --dev`, pois isso evita a necessidade de configurar manualmente o path do Windows.
 * *Nota:* Finalizei as validações do script neste ponto e não executei mais testes do script bash diretamente.
 
-```
-[Espaço Reservado para Imagem: Resolução Local e Erros de Pip/Python]
-<!-- ![Erros de Python/Pip](caminho/para/imagem_erros_python.png) -->
-```
 
 ---
 
@@ -124,10 +124,8 @@ dep-trabalho-final  | 28-06-2026T17:36:46 : INFO : module orchestrator : functio
 dep-trabalho-final  | Log : Pipeline finalizado com sucesso
 ```
 
-```
-[Espaço Reservado para Imagem: Docker Compose Tabela Vazia]
-<!-- ![Docker Compose Vazio](caminho/para/imagem_docker_compose_vazio.png) -->
-```
+<img width="886" height="331" alt="image" src="https://github.com/user-attachments/assets/06aadf44-1397-4a16-9ceb-7001ec345623" />
+
 
 ### Sem Docker Compose (Execução Manual do Docker)
 * **Comandos:**
@@ -146,10 +144,8 @@ dep-trabalho-final  | Log : Pipeline finalizado com sucesso
 +---------+---+---------------+-----------+-----------+
 ```
 
-```
-[Espaço Reservado para Imagem: Docker Run Tabela Vazia]
-<!-- ![Docker Run Vazio](caminho/para/imagem_docker_run_vazio.png) -->
-```
+<img width="886" height="326" alt="image" src="https://github.com/user-attachments/assets/b8331668-2eb8-4d52-a8fb-32498ad422ad" />
+
 
 ---
 
@@ -172,6 +168,9 @@ Pagamentos: 25 arquivos
 Instalando pipenv...
 run_program.sh: line 42: pip: command not found
 ```
+<img width="886" height="223" alt="image" src="https://github.com/user-attachments/assets/0fa9ca28-b28a-404b-8f4e-b3c4e5dc6d14" />
+
+
 
 ### Execução no Docker (Após obtenção dos dados)
 ```bash
@@ -220,11 +219,8 @@ Log : Pipeline finalizado com sucesso
 28-06-2026T08:33:16 : INFO : module main : function main : line 42 : 
 Log : Aplicação encerrada
 ```
+<img width="886" height="455" alt="image" src="https://github.com/user-attachments/assets/26709a88-e507-43eb-a25a-2ed3322ca712" />
 
-```
-[Espaço Reservado para Imagem: Output de Sucesso com DataFrame Populado]
-<!-- ![Sucesso Docker](caminho/para/imagem_sucesso_docker.png) -->
-```
 
 ---
 
@@ -250,10 +246,7 @@ Log : Aplicação encerrada
   * [writer.py](file:///c:/Users/Usuario/Documents/MBA%20Engenharia%20de%20Dados/Projetos/Data%20Engineering%20Programming/Data-Engineering-Programming%20Final/Data-Engineering-Programming---9ABDR-Final/src/data_io/writer.py) (Escrita de dados): **OK**
   * [logic.py](file:///c:/Users/Usuario/Documents/MBA%20Engenharia%20de%20Dados/Projetos/Data%20Engineering%20Programming/Data-Engineering-Programming%20Final/Data-Engineering-Programming---9ABDR-Final/src/business/logic.py) (Regras de negócio): **OK**
 
-```
-[Espaço Reservado para Imagem: Validação de Regras de Negócio / Estrutura do Parquet]
-<!-- ![Regras de Negocio](caminho/para/imagem_regras_negocio.png) -->
-```
+
 
 ---
 
@@ -350,8 +343,7 @@ def execute(self, df_pedidos: DataFrame, df_pagamentos: DataFrame) -> DataFrame:
 ```
 
 ```
-[Espaço Reservado para Imagem: Estrutura Try/Except no Código]
-<!-- ![Try Catch Logic](caminho/para/imagem_try_catch.png) -->
+
 ```
 
 ### 11. Empacotamento da Aplicação
@@ -380,6 +372,8 @@ def execute(self, df_pedidos: DataFrame, df_pagamentos: DataFrame) -> DataFrame:
     ]
     addopts = "-v"
     ```
+    <img width="886" height="331" alt="image" src="https://github.com/user-attachments/assets/d12a81f9-064b-4f06-b501-dab31f7ed37b" />
+
 
 #### Sugestão de Cenário de Teste (Dataset Pagamentos)
 Acho interessante testar os comportamentos de fraude e legitimidade dos pagamentos recusados:
@@ -388,7 +382,3 @@ Acho interessante testar os comportamentos de fraude e legitimidade dos pagament
 2. **Recusado e Fraude (Deve ser DESCARTADO):**
    `("pedido-C", "CARTAO_CREDITO", 300.0, False, "2025-01-01T10:00:00", (True, 0.95))`
 
-```
-[Espaço Reservado para Imagem: Configuração de Testes e Execução do Pytest]
-<!-- ![Execucao Pytest](caminho/para/imagem_pytest.png) -->
-```
