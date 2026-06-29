@@ -63,8 +63,8 @@ Ele solicita para escolher um aplicativo para execução.
 ### Diagnóstico, Impacto e Resolução
 
 * **Impacto:** O erro ocorre devido à diferença de comportamento de quebras de linha entre ambientes Linux e Windows.
-  * No **Windows**, a quebra de linha utiliza retorno de carro e alimentação de linha (`\r\n` / CRLF).
-  * No **Linux/Terminal**, espera-se apenas a alimentação de linha (`\n` / LF).
+  * No **Windows**, a quebra de linha utiliza retorno quebra de linha (`\r\n` / CRLF).
+  * No **Linux/Terminal**, espera-se apenas a alimenta a quebra de linha (`\n` / LF).
 
 * **Sugestão:** Criação do arquivo `.gitattributes` com a regra `*.sh text eol=lf`. Com isso, o Git consegue ajustar automaticamente a quebra de linha nos dois ambientes (Linux/Windows) quando o professor clonar o repositório.
 
